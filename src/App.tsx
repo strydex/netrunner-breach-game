@@ -31,6 +31,7 @@ function App() {
   const [username, setUserName] = useState("");
   const [userAlias, setUserAlias] = useState("");
   const [notes, setNotes] = useState("");
+  const [unsupportedDevice, setUnsupportedDevice] = useState(false);
 
   useEffect(() => {
     // if username exists within localstorage on page load - assign to state
@@ -63,6 +64,26 @@ function App() {
     } else {
       themer("thRed");
     }
+  }, []);
+
+  useEffect(() => {
+    const detectUnsupportedDevice = () => {
+      const userAgent = window.navigator.userAgent ?? "";
+      const isMobileUserAgent =
+        /android|iphone|ipad|ipod|mobile|windows phone|blackberry|silk|kindle/i.test(
+          userAgent
+        );
+      const hasCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+      const isSmallViewport = window.innerWidth < 1100;
+      const hasTouch = window.navigator.maxTouchPoints > 0;
+      setUnsupportedDevice(
+        isMobileUserAgent || (hasTouch && hasCoarsePointer && isSmallViewport)
+      );
+    };
+
+    detectUnsupportedDevice();
+    window.addEventListener("resize", detectUnsupportedDevice);
+    return () => window.removeEventListener("resize", detectUnsupportedDevice);
   }, []);
 
   const [sshLoc, setSshLoc] = useState<NetLocationName>("");
@@ -120,6 +141,22 @@ function App() {
       }, 10000);
     }
   }, [winState]);
+
+  if (unsupportedDevice) {
+    return (
+      <div className="page mobileBlock">
+        <div className="border mobileBlockCard">
+          <p className="titlesText subTitles">Netrunner Breach</p>
+          <p className="highlightText mobileBlockText">
+            Игра пока не оптимизирована под телефоны и планшеты.
+          </p>
+          <p className="mobileBlockText">
+            Откройте ее на ПК или ноутбуке для полного игрового опыта.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return !username ? (
     <>

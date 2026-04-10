@@ -548,6 +548,23 @@ textarea {
   width: 100%;
   overflow: hidden;
 }
+.mobileBlock {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+.mobileBlockCard {
+  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.45);
+  max-width: 560px;
+  padding: 20px;
+  text-align: center;
+}
+.mobileBlockText {
+  line-height: 1.5;
+  margin: 10px 0;
+}
 .bar {
   flex-wrap: wrap;
   width: 100%;
