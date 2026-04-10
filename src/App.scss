@@ -1,0 +1,683 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Tektur:wght@400;500;600;700&display=swap");
+
+/*/////////////////////////////// VARIABLES /////////////////////////////*/
+/**/
+/*THEMES*/
+/* red */
+$bgRed: #120b10;
+$inRed: #a10036;
+$acRed: #ff0055;
+$contrastRed: #ffffff;
+/* yellow */
+$bgYellow: #16160b;
+$inYellow: #839637;
+$acYellow: #d0ee58;
+$contrastYellow: #2570d6;
+/* blue */
+$bgBlue: #0a1d21;
+$inBlue: #19a1a1;
+$acBlue: #28ffff;
+$contrastBlue: #000000;
+/* green */
+$bgGreen: #15251b;
+$inGreen: #168c50;
+$acGreen: #1cd577;
+$contrastGreen: #000000;
+/* white */
+$bgWhite: #1a1a1a;
+$inWhite: #656565;
+$acWhite: #cccccc;
+$contrastWhite: #000000;
+/* NON THEME */
+$cpYellow: #f3e600;
+$uncommon: #18f081;
+$rare: #2570d6;
+$epic: #9c2bf7;
+$legendary: #fd932d;
+
+$monospaced: "Tektur", sans-serif;
+$titlesText: "Tektur", sans-serif;
+$bodyText: "Exo 2", sans-serif;
+
+$background: url(./resources/black-scanline-theme.jpg);
+$VDBs: url(./resources/resoAgwe.jpg);
+
+$padding: 0.5%;
+
+.thRed {
+  --sb-track: #120b10;
+  --sb-thumb: #a10036;
+  --sb-thumb-hover: #ff0055;
+  .border {
+    border-color: $inRed;
+  }
+  .bgStatic {
+    background-color: $bgRed;
+  }
+  .bg {
+    background-color: $bgRed;
+  }
+  .bg:hover {
+    background-color: $inRed;
+    box-shadow: $inRed 2px 2px 5px, $inRed -2px -2px 5px;
+  }
+  .bg:active {
+    background-color: $acRed;
+    box-shadow: $inRed 8px 8px 15px, $inRed -8px -8px 15px;
+  }
+  .centreImage {
+    background-image: url(./resources/centre-logo_red.png);
+  }
+  .cmdInput {
+    background-color: $inRed;
+  }
+  .cmdInput:hover,
+  .cmdInput:focus {
+    background-color: $acRed;
+  }
+  .commands,
+  .highlightText,
+  .uname {
+    color: $acBlue !important;
+  }
+  .headerBar {
+    background-color: $inRed;
+    box-shadow: $acRed 10px 10px 10px, $acRed -10px -10px -10px;
+  }
+  .headerBar:hover,
+  .headerBar:active {
+    background-color: $acRed;
+  }
+  .hover:hover {
+      background-color: rgba(255,0,85,.1);
+  }
+  p,
+  span,
+  li {
+    color: $acRed;
+  }
+  input,
+  textarea {
+    color: $acRed;
+  }
+  .image {
+    filter: sepia(100%) hue-rotate(287deg) saturate(110000%) brightness(0.8);
+  }
+}
+
+.thYellow {
+  --sb-track: #16160b;
+  --sb-thumb: #839637;
+  --sb-thumb-hover: #d0ee58;
+  .border {
+    border-color: $inYellow;
+  }
+  hr {
+    border: 1px solid $inYellow;
+  }
+  .bgStatic {
+    background-color: $bgYellow;
+  }
+  .bg {
+    background-color: $bgYellow;
+  }
+  .bg:hover {
+    background-color: $inYellow;
+    box-shadow: $inYellow 2px 2px 5px, $inYellow -2px -2px 5px;
+  }
+  .bg:active {
+    background-color: $acYellow;
+    box-shadow: $inYellow 8px 8px 15px, $inYellow -8px -8px 15px;
+  }
+  .centreImage {
+    background-image: url(./resources/centre-logo_david-martinez_2.png);
+  }
+  .cmdInput {
+    background-color: $inYellow;
+  }
+  .cmdInput:hover,
+  .cmdInput:focus {
+    background-color: $acYellow;
+  }
+  .commands,
+  .highlightText,
+  .uname {
+    color: white !important;
+  }
+  .headerBar {
+    background-color: $inYellow;
+    box-shadow: $acYellow 2px 2px 5px, $acYellow -2px -2px 5px;
+  }
+  .headerBar:hover,
+  .headerBar:active {
+    background-color: $acYellow;
+  }
+  .hover:hover {
+      background-color: rgba(208,238,88,.1);
+  }
+
+  p,
+  span,
+  li {
+    color: $acYellow;
+  }
+  input,
+  textarea {
+    color: $acYellow;
+  }
+  .image {
+    filter: sepia(100%) hue-rotate(355deg) saturate(1100%) brightness(0.8);
+  }
+}
+
+.thBlue {
+  --sb-track: #0a1d21;
+  --sb-thumb: #19a1a1;
+  --sb-thumb-hover: #28ffff;
+  .border {
+    border-color: $inBlue;
+  }
+  hr {
+    border: 1px solid $inBlue;
+  }
+  .bgStatic {
+    background-color: $bgBlue;
+  }
+  .bg {
+    background-color: $bgBlue;
+  }
+  .bg:hover {
+    background-color: $inBlue;
+    box-shadow: $inBlue 2px 2px 5px, $inBlue -2px -2px 5px;
+  }
+  .bg:active {
+    background-color: $acBlue;
+    box-shadow: $inBlue 8px 8px 15px, $inBlue -8px -8px 15px;
+  }
+  .centreImage {
+    background-image: url(./resources/centre-logo_netwatch.png);
+  }
+  .cmdInput {
+    background-color: $inBlue;
+  }
+  .cmdInput:hover,
+  .cmdInput:focus {
+    background-color: $acBlue;
+  }
+  .commands,
+  .highlightText,
+  .uname {
+    color: $cpYellow !important;
+  }
+  .headerBar {
+    background-color: $inBlue;
+    box-shadow: $acBlue 2px 2px 5px, $acBlue -2px -2px 5px;
+  }
+  .headerBar:hover,
+  .headerBar:active {
+    background-color: $acBlue;
+  }
+  .hover:hover {
+      background-color: rgba(44,161,161,.1);
+  }
+  p,
+  span,
+  li {
+    color: $acBlue;
+  }
+  input,
+  textarea {
+    color: $acBlue;
+  }
+  .image {
+    filter: sepia(100%) hue-rotate(140deg) saturate(20000%) brightness(0.8);
+  }
+}
+.thGreen {
+  --sb-track: #15251b;
+  --sb-thumb: #168c50;
+  --sb-thumb-hover: #1cd577;
+  .border {
+    border-color: $inGreen;
+  }
+  hr {
+    border: 1px solid $inGreen;
+  }
+  .bgStatic {
+    background-color: $bgGreen;
+  }
+  .bg {
+    background-color: $bgGreen;
+  }
+  .bg:hover {
+    background-color: $inGreen;
+    box-shadow: $inGreen 2px 2px 5px, $inGreen -2px -2px 5px;
+  }
+  .bg:active {
+    background-color: $acGreen;
+    box-shadow: $inGreen 8px 8px 15px, $inGreen -8px -8px 15px;
+  }
+  .centreImage {
+    background-image: url(./resources/centre-logo_biotechnica.png);
+  }
+  .cmdInput {
+    background-color: $inGreen;
+  }
+  .cmdInput:hover,
+  .cmdInput:focus {
+    background-color: $acGreen;
+  }
+  .commands,
+  .highlightText,
+  .uname {
+    color: $acYellow !important;
+  }
+  .headerBar {
+    background-color: $inGreen;
+    box-shadow: $acGreen 2px 2px 5px, $acGreen -2px -2px 5px;
+  }
+  .headerBar:hover,
+  .headerBar:active {
+    background-color: $acGreen;
+  }
+  .hover:hover {
+      background-color: rgba(28,213,119,.1);
+  }
+  p,
+  span,
+  li {
+    color: $acGreen;
+  }
+  input,
+  textarea {
+    color: $acGreen;
+  }
+  .image {
+    filter: sepia(100%) hue-rotate(64deg) saturate(1800%) brightness(0.8);
+  }
+}
+.thWhite {
+  --sb-track: #1a1a1a;
+  --sb-thumb: #656565;
+  --sb-thumb-hover: #cccccc;
+  .border {
+    border-color: $inWhite;
+  }
+  hr {
+    border: 1px solid $inWhite;
+  }
+  .bgStatic {
+    background-color: $bgWhite;
+  }
+  .bg {
+    background-color: $bgWhite;
+  }
+  .bg:hover {
+    background-color: $inWhite;
+    box-shadow: $inWhite 2px 2px 5px, $inWhite -2px -2px 5px;
+  }
+  .bg:active {
+    background-color: $acWhite;
+    box-shadow: $inWhite 8px 8px 15px, $inWhite -8px -8px 15px;
+  }
+  .centreImage {
+    background-image: url(./resources/centre-logo_night-city.png);
+  }
+  .cmdInput {
+    background-color: $inWhite;
+  }
+  .cmdInput:hover,
+  .cmdInput:focus {
+    background-color: $acWhite;
+  }
+  .commands,
+  .highlightText,
+  .uname {
+    color: white !important;
+  }
+  .headerBar {
+    background-color: $inWhite;
+    box-shadow: $acWhite 2px 2px 5px, $acWhite -2px -2px 5px;
+  }
+
+  .headerBar:hover,
+  .headerBar:active {
+    background-color: $acWhite;
+  }
+  .hover:hover {
+      background-color: rgba(255,255,255,.1);
+  }
+  p,
+  span,
+  li {
+    color: $acWhite;
+  }
+  input,
+  textarea {
+    color: $acWhite;
+  }
+  .image {
+    filter: brightness(0.8);
+  }
+}
+
+body {
+  background-image: $background;
+  background-position: center;
+  background-repeat: repeat;
+  overflow:hidden;
+}
+/////////////////////////////////// GENERAL STYLING //////////////////////////////////////////////////////////////////
+p,
+input,
+li,
+span,
+textarea {
+  color: inherit;
+  font-family: $monospaced;
+}
+.padding {
+  padding: $padding;
+}
+.titlesText {
+  font-family: $titlesText;
+  font-weight: bolder;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+.subTitles {
+  font-size: 22pt;
+  text-align: center;
+}
+
+.border {
+  border-width: 1px;
+  border-style: ridge;
+}
+
+.headerBar {
+  clip-path: polygon(40px 0, 100% 0%, 100% 100%, 0 100%, 0 40px);
+  cursor: pointer;
+  padding: 2px;
+  margin: 5px 10px 0px 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.headerText {
+  color: #000000 !important;
+  font-size: 14pt;
+}
+
+.bg {
+  cursor: pointer;
+}
+.alertDialog {
+  max-width: 70%;
+  overflow: auto;
+  position: absolute;
+  z-index: 1;
+}
+.alertButton {
+  cursor: pointer;
+  width: 100%;
+}
+.alertButton:focus {
+  outline: none;
+}
+.alertHeader {
+  background: none;
+  font-size: 22pt;
+  text-align: center;
+}
+.alertCyberLink,
+.alertCyberLink:visited {
+  border-bottom: 1px dashed currentColor;
+  color: inherit !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0 2px;
+  text-decoration: none;
+  text-shadow: 0 0 4px currentColor, 0 0 10px rgba(40, 255, 255, 0.45);
+  transition: background-color 120ms ease, box-shadow 120ms ease, text-shadow 120ms ease;
+}
+.alertCyberLink:hover,
+.alertCyberLink:focus-visible {
+  background-color: rgba(40, 255, 255, 0.12);
+  box-shadow: 0 0 0 1px currentColor inset, 0 0 12px rgba(40, 255, 255, 0.45);
+  outline: none;
+  text-shadow: 0 0 8px currentColor, 0 0 16px rgba(40, 255, 255, 0.8);
+}
+.listItem {
+  padding: 2%;
+  text-align: center;
+}
+.blockText {
+  padding: 10px;
+  text-align: justify;
+  margin: -2px 10px 10px 10px;
+}
+.blockText p,
+.blockText li,
+.blockText span {
+  font-family: $bodyText;
+}
+.cyberAudioWrap {
+  margin: 0 0 10px 0;
+  padding: 6px;
+}
+.cyberAudio {
+  accent-color: #28ffff;
+  background: #000 !important;
+  border: 1px solid #28ffff;
+  border-radius: 0 !important;
+  box-shadow: 0 0 8px rgba(40, 255, 255, 0.35);
+  color: #ffffff;
+  display: block;
+  height: 36px;
+  width: 100%;
+}
+.cyberAudio::-webkit-media-controls-enclosure {
+  background: transparent;
+  border-radius: 0 !important;
+}
+.cyberAudio::-webkit-media-controls-panel {
+  background: #000;
+  border-radius: 0 !important;
+}
+.cyberAudio::-webkit-media-controls-current-time-display,
+.cyberAudio::-webkit-media-controls-time-remaining-display {
+  color: #ffffff;
+  font-family: $monospaced;
+  text-shadow: 0 0 6px rgba(40, 255, 255, 0.5);
+}
+.cyberAudio::-webkit-media-controls-play-button,
+.cyberAudio::-webkit-media-controls-mute-button {
+  filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(40, 255, 255, 0.8));
+}
+.cyberAudio::-webkit-media-controls-timeline,
+.cyberAudio::-webkit-media-controls-volume-slider {
+  filter: brightness(1.15) saturate(1.4) drop-shadow(0 0 3px rgba(40, 255, 255, 0.7));
+}
+/* /////////////////////// TERMINAL /////////////////////////////////////*/
+.centreImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60vh;
+}
+.terminalText {
+  padding: $padding;
+  padding-top: 0 !important;
+}
+.cmdInput {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  margin: 0% -1% 0% -1%;
+  padding: 1%;
+  padding-left: 2% !important;
+}
+.form {
+  flex-grow: 1;
+}
+.commands,
+.uname {
+  background: none;
+  border: none;
+  font-size: 14pt;
+  font-weight: bolder;
+  outline: none;
+}
+.commands {
+  width: 100%;
+}
+.commands:focus {
+  border: none;
+  outline: none;
+}
+.cmdReturn {
+  margin-bottom: 2%;
+}
+
+/* /////////////////////// POSITIONING /////////////////////////////////////*/
+
+.page {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.bar {
+  flex-wrap: wrap;
+  width: 100%;
+}
+.gameHeader {
+  align-items: center;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+}
+.gameHeaderLogo {
+  justify-self: start;
+  padding-left: 12px;
+}
+.gameHeaderTitle {
+  font-size: clamp(20pt, 3vw, 32pt);
+  justify-self: center;
+  text-align: center;
+}
+.gameHeaderVersion {
+  font-size: clamp(10pt, 1.5vw, 16pt);
+  font-style: italic;
+  justify-self: end;
+  padding-right: 12px;
+  white-space: nowrap;
+}
+.gameFooter {
+  align-items: center;
+  box-sizing: border-box;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(90px, 150px) 1fr minmax(90px, 120px);
+  min-height: 58px;
+  overflow: visible;
+  width: 100%;
+}
+.gameFooterLogo {
+  justify-self: start;
+  padding-left: 10px;
+}
+.gameFooterLogoImg {
+  display: block;
+  height: auto;
+  max-height: 36px;
+  width: clamp(72px, 8vw, 96px);
+}
+.gameFooterTitle {
+  font-size: clamp(9pt, 1.2vw, 13pt);
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+}
+.gameFooterQr {
+  justify-self: end;
+  padding-right: 10px;
+  position: relative;
+}
+.gameFooterQrImg {
+  background: #ffffff;
+  border: 1px solid #28ffff;
+  box-shadow: 0 0 8px rgba(40, 255, 255, 0.25);
+  cursor: zoom-in;
+  display: block;
+  height: auto;
+  max-height: 40px;
+  transform-origin: right bottom;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: clamp(36px, 5vw, 44px);
+}
+.gameFooterQrImg:hover {
+  box-shadow: 0 0 14px rgba(40, 255, 255, 0.65);
+  transform: scale(4);
+  z-index: 25;
+}
+.welcome {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+.inlineBox {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.panels {
+  display: flex;
+  flex-grow: 2;
+  min-width: 0;
+  width: 100%;
+}
+.panel {
+  box-sizing: border-box;
+  height: 85vh !important;
+  overflow-x: hidden;
+}
+.centrePanel {
+  flex: 0 1 60%;
+  min-width: 0;
+}
+.sidePanel {
+  flex: 0 1 20%;
+  min-width: 0;
+}
+.scroll {
+  overflow-y: scroll;
+}
+
+/* Themed scrollbars for panel columns and notes. */
+.scroll,
+.notes {
+  scrollbar-color: var(--sb-thumb) var(--sb-track);
+  scrollbar-width: thin;
+}
+.scroll::-webkit-scrollbar,
+.notes::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+.scroll::-webkit-scrollbar-track,
+.notes::-webkit-scrollbar-track {
+  background: var(--sb-track);
+}
+.scroll::-webkit-scrollbar-thumb,
+.notes::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb);
+  border: 1px solid var(--sb-thumb-hover);
+  border-radius: 0;
+}
+.scroll::-webkit-scrollbar-thumb:hover,
+.notes::-webkit-scrollbar-thumb:hover {
+  background: var(--sb-thumb-hover);
+}
