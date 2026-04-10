@@ -55,6 +55,16 @@
 - Элементы UI стилизованы под выбранную тему.
 - Музыкальные треки встроены локально в игру.
 
+## Скриншоты
+
+### Интерфейс в стиле NetWatch
+
+![Netrunner Breach - NetWatch theme](src/resources/netwatch-netruner_screenshot_new.png)
+
+### Альтернативная тема интерфейса
+
+![Netrunner Breach - Alternate theme](src/resources/netwatch-netruner_screenshot.png)
+
 ## Технический стек
 
 - **TypeScript**
