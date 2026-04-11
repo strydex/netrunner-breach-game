@@ -105,3 +105,5 @@ npm test
 - добавлять подсказки через окружение (файлы, IRC, скрытые сообщения), а не прямые ответы;
 - проверять, что сценарий проходим без перезагрузки страницы.
 
+Special thanks to original unmaintained project https://github.com/TaureHorn
+
